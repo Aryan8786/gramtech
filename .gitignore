@@ -1,0 +1,17 @@
+# Build directories
+.gradle/
+build/
+app/build/
+java_webapp/bin/
+
+# Local configuration & tools
+.tools/
+local.properties
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Virtual environments & cache
+__pycache__/
+*.pyc

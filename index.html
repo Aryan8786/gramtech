@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuralRise / GramTech — Technology Support for Rural Startups</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="desktop-view">
+    <!-- Top Announcement Bar -->
+    <aside class="academic-banner" aria-label="College Project Notice">
+        <div class="banner-inner container">
+            <span class="badge-academic">College CEP Project</span>
+            <span class="banner-text">Topic: <strong>Technology Support for Rural Startups</strong> &bull; Java Web Edition</span>
+            <span class="badge-status" id="server-status-pill">● Java Server Active (Port 8080)</span>
+        </div>
+    </aside>
+
+    <!-- App Container Wrapper (allows toggling phone mockup vs wide desktop) -->
+    <div id="app-viewport-wrapper">
+        <div id="phone-frame" class="frame-container">
+            <!-- Simulated Phone Speaker & Notch for Phone View -->
+            <div class="phone-notch-bar">
+                <div class="phone-speaker"></div>
+            </div>
+
+            <!-- Main Header / Navigation Bar -->
+            <header class="navbar" id="main-nav">
+                <div class="nav-container">
+                    <div class="brand" onclick="navigateTo('home')">
+                        <div class="brand-icon">🌱</div>
+                        <div class="brand-text">
+                            <span class="brand-title">RuralRise <span class="brand-sub">GramTech</span></span>
+                            <span class="brand-tagline">Rural Startup Tech Support</span>
+                        </div>
+                    </div>
+
+                    <nav class="nav-links" id="desktop-nav-menu">
+                        <a href="javascript:void(0)" class="nav-item active" data-target="home" onclick="navigateTo('home')">Home</a>
+                        <a href="javascript:void(0)" class="nav-item" data-target="resources" onclick="navigateTo('resources')">Resources</a>
+                        <a href="javascript:void(0)" class="nav-item" data-target="ideas" onclick="navigateTo('ideas')">Business Ideas</a>
+                        <a href="javascript:void(0)" class="nav-item" data-target="tools" onclick="navigateTo('tools')">Digital Tools</a>
+                        <a href="javascript:void(0)" class="nav-item" data-target="about" onclick="navigateTo('about')">About & FAQs</a>
+                    </nav>
+
+                    <div class="nav-actions">
+                        <button id="view-mode-toggle" class="btn-outline-mode" title="Toggle between Full Desktop Dashboard and Smartphone Mockup Frame">
+                            <span id="view-mode-icon">📱</span>
+                            <span id="view-mode-text">Phone Frame</span>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Hamburger -->
+                    <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Mobile Drawer Menu -->
+            <div class="mobile-drawer" id="mobile-drawer">
+                <div class="drawer-header">
+                    <div class="brand-drawer">
+                        <span class="brand-icon">🌱</span>
+                        <span>RuralRise Menu</span>
+                    </div>
+                    <button class="drawer-close" id="drawer-close-btn">&times;</button>
+                </div>
+                <div class="drawer-body">
+                    <a href="javascript:void(0)" class="drawer-item" onclick="navigateTo('home'); closeDrawer();">🏡 Home</a>
+                    <a href="javascript:void(0)" class="drawer-item" onclick="navigateTo('resources'); closeDrawer();">📚 Learning Resources</a>
+                    <a href="javascript:void(0)" class="drawer-item" onclick="navigateTo('ideas'); closeDrawer();">💡 Business Ideas</a>
+                    <a href="javascript:void(0)" class="drawer-item" onclick="navigateTo('tools'); closeDrawer();">🛠️ Digital Tools</a>
+                    <a href="javascript:void(0)" class="drawer-item" onclick="navigateTo('about'); closeDrawer();">ℹ️ About & FAQs</a>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <main id="main-content" class="content-wrapper">
+
+                <!-- ========================================== -->
+                <!-- 1. HOME SCREEN                             -->
+                <!-- ========================================== -->
+                <section id="screen-home" class="page-section active">
+                    <!-- Hero Section -->
+                    <div class="hero-card">
+                        <div class="hero-content">
+                            <div class="hero-badge">
+                                <span>🌾 Technology for Rural Empowerment</span>
+                            </div>
+                            <h1 class="hero-title">
+                                Technology Support for <span class="highlight">Rural Startups</span>
+                            </h1>
+                            <p class="hero-desc">
+                                A complete, accessible digital portal designed for village entrepreneurs, self-help groups (SHGs), traditional craftspeople, and rural innovators to master digital tools, explore viable business blueprints, and accelerate rural enterprise growth.
+                            </p>
+                            <div class="hero-buttons">
+                                <button class="btn-primary" onclick="navigateTo('resources')">
+                                    <span>Explore Learning Guides</span> &rarr;
+                                </button>
+                                <button class="btn-secondary" onclick="navigateTo('ideas')">
+                                    <span>💡 Business Ideas</span>
+                                </button>
+                                <button class="btn-outline" onclick="navigateTo('tools')">
+                                    <span>🛠️ Digital Tools</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <div class="tech-cube-grid">
+                                <div class="tech-badge-card" onclick="navigateTo('tools')">
+                                    <span class="tech-icon">📱</span>
+                                    <strong>Mobile Commerce</strong>
+                                    <small>WhatsApp & UPI Sales</small>
+                                </div>
+                                <div class="tech-badge-card" onclick="navigateTo('ideas')">
+                                    <span class="tech-icon">🌱</span>
+                                    <strong>Rural Ventures</strong>
+                                    <small>Agri & Handicrafts</small>
+                                </div>
+                                <div class="tech-badge-card" onclick="navigateTo('resources')">
+                                    <span class="tech-icon">📚</span>
+                                    <strong>Startup Basics</strong>
+                                    <small>Costing & Planning</small>
+                                </div>
+                                <div class="tech-badge-card" onclick="navigateTo('tools')">
+                                    <span class="tech-icon">🛠️</span>
+                                    <strong>Digital Tools</strong>
+                                    <small>Marketing & Khata</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics Strip -->
+                    <div class="stats-strip">
+                        <div class="stat-item">
+                            <span class="stat-number">11+</span>
+                            <span class="stat-label">Practical Startup Guides</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Tested Rural Business Models</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Essential Digital Tool Pillars</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Standard Java Backend</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Feature Cards -->
+                    <div class="section-header">
+                        <h2>Explore Core Focus Areas</h2>
+                        <p>Practical digital tools and frameworks tailored for non-urban business success</p>
+                    </div>
+
+                    <div class="features-grid">
+                        <div class="feature-card" onclick="navigateTo('resources')">
+                            <div class="feature-icon-wrapper bg-green">
+                                <span>📚</span>
+                            </div>
+                            <h3>Learning & Startup Guides</h3>
+                            <p>Step-by-step guidance on market research, costing, business plans, bookkeeping, and digital marketing.</p>
+                            <span class="card-link">Explore Guides &rarr;</span>
+                        </div>
+
+                        <div class="feature-card" onclick="navigateTo('ideas')">
+                            <div class="feature-icon-wrapper bg-amber">
+                                <span>💡</span>
+                            </div>
+                            <h3>Rural Business Ideas</h3>
+                            <p>Actionable venture concepts including organic farming, smart dairy, micro-processing, and farmstays.</p>
+                            <span class="card-link">View Blueprints &rarr;</span>
+                        </div>
+
+                        <div class="feature-card" onclick="navigateTo('tools')">
+                            <div class="feature-icon-wrapper bg-blue">
+                                <span>🛠️</span>
+                            </div>
+                            <h3>Essential Digital Tools</h3>
+                            <p>Practical apps for messaging, UPI payments, social catalogs, and cloud spreadsheets without costly IT setups.</p>
+                            <span class="card-link">Discover Tools &rarr;</span>
+                        </div>
+                    </div>
+
+                    <!-- Callout Quote Card -->
+                    <div class="callout-card">
+                        <div class="callout-text">
+                            <h3>"Technology is not just for big cities. It is the great equalizer for rural India."</h3>
+                            <p>Rural startups often have superior quality raw materials and traditional craftsmanship. Digital tools and straightforward management provide the bridge to high-margin direct markets.</p>
+                        </div>
+                        <button class="btn-primary" onclick="navigateTo('ideas')">Start Your Rural Journey</button>
+                    </div>
+                </section>
+
+                <!-- ========================================== -->
+                <!-- 2. RESOURCES & LEARNING MODULES            -->
+                <!-- ========================================== -->
+                <section id="screen-resources" class="page-section">
+                    <div class="page-banner">
+                        <div class="page-banner-content">
+                            <span class="page-tag">Educational Modules</span>
+                            <h2>Startup Learning & Guidance</h2>
+                            <p>Clear, non-technical advice to guide you from initial idea to everyday business execution.</p>
+                        </div>
+                        <div class="search-box-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="resource-search-input" placeholder="Search guides (e.g. pricing, UPI, marketing, planning)..." autocomplete="off">
+                        </div>
+                    </div>
+
+                    <!-- Category Pills -->
+                    <div class="category-tabs" id="resource-category-tabs">
+                        <button class="cat-pill active" data-cat="all">All Topics (11)</button>
+                        <button class="cat-pill" data-cat="business">Business Basics</button>
+                        <button class="cat-pill" data-cat="digital">Digital Skills</button>
+                        <button class="cat-pill" data-cat="finance">Financial Awareness</button>
+                    </div>
+
+                    <!-- Resources Grid -->
+                    <div class="resources-grid" id="resources-cards-container">
+                        <!-- Populated dynamically via Java API / local data -->
+                    </div>
+                </section>
+
+                <!-- ========================================== -->
+                <!-- 3. RURAL BUSINESS IDEAS                    -->
+                <!-- ========================================== -->
+                <section id="screen-ideas" class="page-section">
+                    <div class="page-banner">
+                        <div class="page-banner-content">
+                            <span class="page-tag">Actionable Concepts</span>
+                            <h2>Viable Rural Business Blueprints</h2>
+                            <p>Low-to-medium capital enterprises tailored for village natural resources, local agriculture, and digital channels.</p>
+                        </div>
+                    </div>
+
+                    <div class="ideas-grid" id="ideas-cards-container">
+                        <!-- Populated dynamically -->
+                    </div>
+                </section>
+
+                <!-- ========================================== -->
+                <!-- 4. DIGITAL TOOLS DIRECTORY                 -->
+                <!-- ========================================== -->
+                <section id="screen-tools" class="page-section">
+                    <div class="page-banner">
+                        <div class="page-banner-content">
+                            <span class="page-tag">Tech Stack for Beginners</span>
+                            <h2>Essential Digital Tools for Rural Startups</h2>
+                            <p>Low-cost, mobile-friendly tools that every rural entrepreneur can operate from a smartphone without programming knowledge.</p>
+                        </div>
+                    </div>
+
+                    <div class="tools-container" id="tools-cards-container">
+                        <!-- Populated dynamically -->
+                    </div>
+                </section>
+
+                <!-- ========================================== -->
+                <!-- 5. ABOUT & SUPPORT (COLLEGE CEP INFO)      -->
+                <!-- ========================================== -->
+                <section id="screen-about" class="page-section">
+                    <div class="page-banner">
+                        <div class="page-banner-content">
+                            <span class="page-tag">Academic Documentation</span>
+                            <h2>About RuralRise / GramTech Project</h2>
+                            <p>College CEP (Community Engagement Project) on "Technology Support for Rural Startups".</p>
+                        </div>
+                    </div>
+
+                    <div class="about-grid">
+                        <div class="about-card main-info-card">
+                            <div class="academic-seal">🎓</div>
+                            <h3>College CEP Project Overview</h3>
+                            <p class="lead-text">
+                                <strong>Project Title:</strong> Technology Support for Rural Startups<br>
+                                <strong>Software Prototype:</strong> RuralRise / GramTech Web Application<br>
+                                <strong>Architecture:</strong> Java Native Web Edition (Zero external dependencies)
+                            </p>
+
+                            <h4>Problem Statement:</h4>
+                            <p>
+                                Rural entrepreneurs, women-led SHGs, and traditional artisans produce high quality goods but suffer from low profit realization due to middlemen, lack of knowledge about digital payment channels, and missing bookkeeping skills.
+                            </p>
+
+                            <h4>Key Objectives of This Software:</h4>
+                            <ul class="bullet-list">
+                                <li>Provide structured, jargon-free knowledge modules on startup basics and digital skills.</li>
+                                <li>Compile actionable rural business models that leverage local resources and mobile commerce.</li>
+                                <li>Demystify practical smartphone tools for communication, digital payments, and accounting.</li>
+                                <li>Present a clean, dual-view (Desktop Portal + Mobile Phone Frame) interface for college evaluation.</li>
+                            </ul>
+
+                            <div class="tech-spec-box">
+                                <h5>Technical Implementation Specifications:</h5>
+                                <div class="specs-grid">
+                                    <div><strong>Backend Engine:</strong> Java 21 Standard Library (<code>com.sun.net.httpserver</code>)</div>
+                                    <div><strong>Data Repository:</strong> <code>logic.GramTechData</code></div>
+                                    <div><strong>Frontend:</strong> HTML5 Semantic, Modern CSS3 Flex/Grid, Vanilla ES6 JavaScript</div>
+                                    <div><strong>Data Persistence:</strong> Zero external database (100% static in-memory data for instant demonstration)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-card faq-card">
+                            <h3>Frequently Asked Questions (Evaluator FAQs)</h3>
+                            <div class="faq-list" id="faq-accordion-container">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Bottom Navigation Bar for Mobile Phone Frame View -->
+            <nav class="phone-bottom-nav" id="phone-bottom-nav">
+                <button class="p-nav-btn active" data-target="home" onclick="navigateTo('home')">
+                    <span class="p-icon">🏡</span>
+                    <span class="p-text">Home</span>
+                </button>
+                <button class="p-nav-btn" data-target="resources" onclick="navigateTo('resources')">
+                    <span class="p-icon">📚</span>
+                    <span class="p-text">Learn</span>
+                </button>
+                <button class="p-nav-btn" data-target="ideas" onclick="navigateTo('ideas')">
+                    <span class="p-icon">💡</span>
+                    <span class="p-text">Ideas</span>
+                </button>
+                <button class="p-nav-btn" data-target="tools" onclick="navigateTo('tools')">
+                    <span class="p-icon">🛠️</span>
+                    <span class="p-text">Tools</span>
+                </button>
+                <button class="p-nav-btn" data-target="about" onclick="navigateTo('about')">
+                    <span class="p-icon">ℹ️</span>
+                    <span class="p-text">About</span>
+                </button>
+            </nav>
+
+            <!-- Footer -->
+            <footer class="app-footer">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <span class="footer-logo">🌱 RuralRise / GramTech</span>
+                        <p>College CEP Project &bull; Technology Support for Rural Startups &bull; Java Edition</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="javascript:void(0)" onclick="navigateTo('home')">Home</a>
+                        <a href="javascript:void(0)" onclick="navigateTo('resources')">Resources</a>
+                        <a href="javascript:void(0)" onclick="navigateTo('ideas')">Business Ideas</a>
+                        <a href="javascript:void(0)" onclick="navigateTo('tools')">Digital Tools</a>
+                        <a href="javascript:void(0)" onclick="navigateTo('about')">About & FAQs</a>
+                    </div>
+                    <div class="footer-copy">
+                        <small>&copy; 2026 Academic Student Prototype. Educational demonstration only. Free & Open Access.</small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Generic Modal for Reading Full Guides & Blueprints -->
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-title-wrap">
+                    <span class="modal-icon" id="modal-icon">📄</span>
+                    <div>
+                        <span class="modal-category" id="modal-category">Guide</span>
+                        <h3 id="modal-title">Item Title</h3>
+                    </div>
+                </div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-content">
+                <!-- Injected via JS -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="closeModal()">Close Guide</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Core -->
+    <script src="app.js"></script>
+</body>
+</html>

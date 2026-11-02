@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GramTech</string>
+    <string name="app_tagline">Technology Support for Rural Startups</string>
+    <string name="cep_title">CEP Project: Technology Support for Rural Startups</string>
+</resources>
